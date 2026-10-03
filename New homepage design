@@ -1,409 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Maria F. Guzman</title>
-
-https://fonts.googleapis.com
-https://fonts.gstatic.com
-
-https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap
+<title>María F. Guzmán</title>
 
 <style>
 
-:root{
-
---night:#091425;
---gold:#C9A96E;
---cream:#F4F1EA;
-
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
 body{
+    margin:0;
+    min-height:100vh;
+    background:#091425;
+    color:white;
+    font-family:Georgia, serif;
 
-background:
-radial-gradient(circle at top,#14294b,#091425);
-
-color:var(--cream);
-
-font-family:'Inter',sans-serif;
-
-overflow-x:hidden;
-
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
 
-.stars{
-
-position:fixed;
-
-inset:0;
-
-background-image:
-radial-gradient(white 1px,transparent 1px);
-
-background-size:60px 60px;
-
-opacity:.15;
-
-pointer-events:none;
-
-animation:drift 60s linear infinite;
-
-}
-
-@keyframes drift{
-
-from{
-transform:translateY(0px);
-}
-
-to{
-transform:translateY(60px);
-}
-
-}
-
-.hero{
-
-min-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-padding:60px;
-
-position:relative;
-
-}
-
-.hero-content{
-
-display:grid;
-
-grid-template-columns:1.1fr .9fr;
-
-gap:60px;
-
-max-width:1400px;
-
-width:100%;
-
-align-items:center;
-
+.container{
+    max-width:800px;
+    padding:40px;
 }
 
 h1{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:6rem;
-
-font-weight:600;
-
-line-height:1;
-
-margin-bottom:20px;
-
+    font-size:5rem;
+    margin-bottom:10px;
 }
 
-.tagline{
-
-color:var(--gold);
-
-font-size:1.2rem;
-
-margin-bottom:30px;
-
-letter-spacing:1px;
-
+.subtitle{
+    color:#C9A96E;
+    font-size:1.4rem;
+    margin-bottom:40px;
 }
 
 .welcome{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:2rem;
-
-font-style:italic;
-
-margin-top:40px;
-
-}
-
-.photo{
-
-display:flex;
-
-justify-content:center;
-
-}
-
-.photo img{
-
-width:100%;
-
-max-width:450px;
-
-border-radius:24px;
-
-box-shadow:
-0 40px 80px rgba(0,0,0,.4);
-
-}
-
-.scroll{
-
-position:absolute;
-
-bottom:40px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-opacity:.7;
-
-font-size:.9rem;
-
-letter-spacing:2px;
-
-}
-
-.archive{
-
-min-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-padding:120px 40px;
-
-}
-
-.archive h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:3rem;
-
-margin-bottom:30px;
-
-}
-
-.archive p{
-
-max-width:700px;
-
-line-height:1.8;
-
-font-size:1.1rem;
-
-}
-
-.worlds{
-
-padding:120px 60px;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:30px;
-
-max-width:1300px;
-
-margin:auto;
-
-}
-
-.world{
-
-background:rgba(255,255,255,.04);
-
-border:1px solid rgba(255,255,255,.08);
-
-backdrop-filter:blur(8px);
-
-padding:40px;
-
-border-radius:24px;
-
-transition:.4s;
-
-}
-
-.world:hover{
-
-transform:translateY(-8px);
-
-}
-
-.world h3{
-
-color:var(--gold);
-
-margin-bottom:20px;
-
-font-size:1.4rem;
-
-}
-
-.academicrex{
-
-position:fixed;
-
-right:20px;
-
-bottom:20px;
-
-background:rgba(0,0,0,.4);
-
-padding:12px 18px;
-
-border-radius:50px;
-
-backdrop-filter:blur(10px);
-
-font-size:.9rem;
-
-}
-
-@media(max-width:900px){
-
-.hero-content{
-
-grid-template-columns:1fr;
-
-}
-
-h1{
-
-font-size:4rem;
-
-}
-
-.welcome{
-
-font-size:1.5rem;
-
-}
-
+    font-size:2rem;
+    font-style:italic;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="stars"></div>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<div>
+<div class="container">
 
 <h1>María F. Guzmán</h1>
 
-<p class="tagline">
+<div class="subtitle">
 Researcher • Writer • Streamer
-</p>
+</div>
 
-<p class="welcome">
+<div class="welcome">
 Welcome to my universe.
-</p>
-
 </div>
-
-<div class="photo">
-
-https://via.placeholder.com/450x600
-
-</div>
-
-</div>
-
-<div class="scroll">
-
-SCROLL TO EXPLORE
-
-</div>
-
-</section>
-
-<section class="archive">
-
-<h2>
-Every world begins with a story.
-</h2>
-
-<p>
-Research, storytelling, and digital culture come together through exploration, creativity, and community.
-</p>
-
-</section>
-
-<section class="worlds">
-
-<div class="world">
-
-<h3>📚 Research Conservatory</h3>
-
-<p>
-Research, teaching, publications, conferences, and public humanities.
-</p>
-
-</div>
-
-<div class="world">
-
-<h3>✍️ Literary Wing</h3>
-
-<p>
-S. Samuels, Arcángel, poetry, fiction, and creative worlds.
-</p>
-
-</div>
-
-<div class="world">
-
-<h3>🎮 Digital Culture Hub</h3>
-
-<p>
-TuMaestra_, streaming, gaming, digital culture, and community.
-</p>
-
-</div>
-
-</section>
-
-<div class="academicrex">
-
-🦖 AcademicRex is nearby.
 
 </div>
 
