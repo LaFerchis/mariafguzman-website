@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,43 +10,319 @@
 
 <style>
 
-body{
+:root{
+--night:#081325;
+--night-light:#11284a;
+--gold:#caa76a;
+--cream:#f4f1ea;
+}
+
+*{
 margin:0;
-background:#091425;
-color:white;
-font-family:Georgia,serif;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:
+radial-gradient(circle at top,
+var(--night-light),
+var(--night));
+
+color:var(--cream);
+
+font-family:Georgia, serif;
+
+overflow-x:hidden;
+
+}
+
+.stars{
+
+position:fixed;
+inset:0;
+
+background-image:
+radial-gradient(white 1px, transparent 1px);
+
+background-size:120px 120px;
+
+opacity:.08;
+
+pointer-events:none;
+
+animation:drift 80s linear infinite;
+
+}
+
+@keyframes drift{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(80px);
+}
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+left:0;
+right:0;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:30px 50px;
+
+backdrop-filter:blur(10px);
+
+background:rgba(8,19,37,.3);
+
+z-index:1000;
+
+}
+
+nav a{
+
+color:var(--cream);
+
+text-decoration:none;
+
+margin-left:25px;
+
+opacity:.8;
+
+transition:.3s;
+}
+
+nav a:hover{
+
+color:var(--gold);
+
+opacity:1;
 }
 
 .hero{
-height:100vh;
+
+min-height:100vh;
+
 display:flex;
-flex-direction:column;
-justify-content:center;
+
 align-items:center;
-text-align:center;
-padding:20px;
+
+justify-content:center;
+
+padding:140px 60px 80px;
+
 }
 
-h1{
-font-size:5rem;
-margin:0;
+.hero-container{
+
+max-width:1300px;
+
+width:100%;
+
+display:grid;
+
+grid-template-columns:1.1fr .9fr;
+
+gap:60px;
+
+align-items:center;
+
 }
 
-.subtitle{
-margin-top:20px;
-color:#C9A96E;
-font-size:1.4rem;
+.hero-text h1{
+
+font-size:6rem;
+
+line-height:.92;
+
+font-weight:500;
+
+margin-bottom:30px;
+
+}
+
+.tagline{
+
+color:var(--gold);
+
+letter-spacing:1px;
+
+font-size:1.3rem;
+
+margin-bottom:50px;
+
 }
 
 .welcome{
-margin-top:60px;
-font-size:2rem;
+
+font-size:2.6rem;
+
+font-style:italic;
+
+margin-bottom:60px;
+
+}
+
+.explore{
+
+font-size:1rem;
+
+letter-spacing:3px;
+
+opacity:.8;
+}
+
+.hero-image{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.hero-image img{
+
+width:100%;
+
+max-width:430px;
+
+border-radius:26px;
+
+box-shadow:
+0 40px 80px rgba(0,0,0,.45);
+
+}
+
+.bridge{
+
+min-height:60vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:80px;
+
+text-align:center;
+
+}
+
+.bridge h2{
+
+font-size:3rem;
+
+font-weight:400;
+
 font-style:italic;
 }
 
-.scroll{
-margin-top:80px;
-opacity:.8;
+.worlds{
+
+max-width:1400px;
+
+margin:auto;
+
+padding:80px 50px 120px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.world{
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:40px;
+
+border-radius:24px;
+
+transition:.4s;
+}
+
+.world:hover{
+
+transform:translateY(-10px);
+}
+
+.world h3{
+
+color:var(--gold);
+
+margin-bottom:20px;
+}
+
+.rex{
+
+position:fixed;
+
+bottom:20px;
+right:20px;
+
+background:rgba(255,255,255,.08);
+
+padding:12px 18px;
+
+border-radius:40px;
+
+font-size:.9rem;
+
+backdrop-filter:blur(10px);
+
+}
+
+@media(max-width:900px){
+
+.hero-container{
+
+grid-template-columns:1fr;
+}
+
+.hero-text{
+
+text-align:center;
+}
+
+.hero-text h1{
+
+font-size:4rem;
+}
+
+.welcome{
+
+font-size:2rem;
+}
+
+nav{
+
+padding:20px;
+font-size:.9rem;
+}
+
 }
 
 </style>
@@ -53,23 +331,121 @@ opacity:.8;
 
 <body>
 
+<div class="stars"></div>
+
+<nav>
+
+<div>
+María F. Guzmán
+</div>
+
+<div>
+
+<a href="#">Research</a>
+
+<a href="#">Writing</a>
+
+<a href="#">Digital Culture</a>
+
+<a href="#">CV</a>
+
+<a href="#">EN | ES</a>
+
+</div>
+
+</nav>
+
 <section class="hero">
 
-<h1>María F. Guzmán</h1>
+<div class="hero-container">
 
-<div class="subtitle">
+<div class="hero-text">
+
+<h1>
+María F.<br>
+Guzmán
+</h1>
+
+<div class="tagline">
+
 Researcher • Writer • Streamer
+
 </div>
 
 <div class="welcome">
+
 Welcome to my universe.
+
 </div>
 
-<div class="scroll">
-↓ Scroll to explore ↓
+<div class="explore">
+
+Begin exploring ↓
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop
+
+</div>
+
 </div>
 
 </section>
 
+<section class="bridge">
+
+<h2>
+
+Every world begins with a story.
+
+</h2>
+
+</section>
+
+<section class="worlds">
+
+<div class="world">
+
+<h3>📚 Research Conservatory</h3>
+
+<p>
+Research, teaching, publications, conferences, and public humanities.
+</p>
+
+</div>
+
+<div class="world">
+
+<h3>✍️ Literary Wing</h3>
+
+<p>
+S. Samuels, Arcángel, fiction, poetry, and creative projects.
+</p>
+
+</div>
+
+<div class="world">
+
+<h3>🎮 Digital Culture Hub</h3>
+
+<p>
+TuMaestra_, gaming, streaming, digital culture, and community.
+</p>
+
+</div>
+
+</section>
+
+<div class="rex">
+
+🦖 AcademicRex is nearby.
+
+</div>
+
 </body>
+
 </html>
