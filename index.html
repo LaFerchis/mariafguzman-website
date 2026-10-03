@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,289 +8,43 @@
 
 <style>
 
-:root{
---night:#081325;
---night-light:#102447;
---gold:#c6a15b;
---cream:#f5f1e8;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
 body{
-
-font-family:Georgia, serif;
-
-background:
-radial-gradient(circle at top,
-var(--night-light),
-var(--night));
-
-color:var(--cream);
-
-overflow-x:hidden;
-}
-
-.stars{
-
-position:fixed;
-inset:0;
-
-background-image:
-radial-gradient(white 1px, transparent 1px);
-
-background-size:80px 80px;
-
-opacity:.10;
-
-animation:drift 80s linear infinite;
-
-pointer-events:none;
-z-index:1;
-}
-
-@keyframes drift{
-
-from{
-transform:translateY(0);
-}
-
-to{
-transform:translateY(80px);
-}
-
-}
-
-nav{
-
-position:fixed;
-
-top:0;
-left:0;
-right:0;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-padding:30px 50px;
-
-z-index:20;
-
-background:rgba(8,19,37,.35);
-
-backdrop-filter:blur(12px);
-}
-
-.brand{
-
-font-size:1rem;
-letter-spacing:2px;
-}
-
-.menu{
-
-display:flex;
-gap:25px;
-}
-
-.menu a{
-
-color:var(--cream);
-
-text-decoration:none;
-
-opacity:.75;
-
-transition:.3s;
-}
-
-.menu a:hover{
-
-opacity:1;
-
-color:var(--gold);
+margin:0;
+background:#091425;
+color:white;
+font-family:Georgia,serif;
 }
 
 .hero{
-
-min-height:100vh;
-
+height:100vh;
 display:flex;
-
-align-items:center;
-
+flex-direction:column;
 justify-content:center;
-
-padding:120px 60px 60px;
-
-position:relative;
-
-z-index:5;
-}
-
-.hero-content{
-
-max-width:1400px;
-
-width:100%;
-
-display:grid;
-
-grid-template-columns:1.2fr .8fr;
-
-gap:60px;
-
 align-items:center;
-}
-
-.left{
-
-max-width:800px;
-}
-
-.left h1{
-
-font-size:7rem;
-
-line-height:.95;
-
-margin-bottom:30px;
-
-font-weight:500;
-}
-
-.tagline{
-
-color:var(--gold);
-
-font-size:1.4rem;
-
-margin-bottom:70px;
-}
-
-.welcome{
-
-font-size:3rem;
-
-font-style:italic;
-}
-
-.right{
-
-display:flex;
-
-justify-content:center;
-}
-
-.right img{
-
-width:100%;
-
-max-width:420px;
-
-border-radius:30px;
-
-box-shadow:
-0 40px 100px rgba(0,0,0,.45);
-}
-
-.scroll{
-
-position:absolute;
-
-bottom:40px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-opacity:.7;
-
-letter-spacing:3px;
-}
-
-.section-intro{
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
 text-align:center;
-
-padding:60px;
-}
-
-.section-intro h2{
-
-font-size:3rem;
-
-font-weight:400;
-
-font-style:italic;
-}
-
-.academicrex{
-
-position:fixed;
-
-bottom:25px;
-
-right:25px;
-
-background:rgba(255,255,255,.08);
-
-padding:12px 18px;
-
-border-radius:40px;
-
-font-size:.9rem;
-
-backdrop-filter:blur(10px);
-
-z-index:30;
-}
-
-@media(max-width:900px){
-
-.hero-content{
-
-grid-template-columns:1fr;
-}
-
-.left h1{
-
-font-size:4rem;
-}
-
-.welcome{
-
-font-size:2rem;
-}
-
-nav{
-
 padding:20px;
 }
 
-.menu{
-
-gap:15px;
-font-size:.9rem;
+h1{
+font-size:5rem;
+margin:0;
 }
 
+.subtitle{
+margin-top:20px;
+color:#C9A96E;
+font-size:1.4rem;
+}
+
+.welcome{
+margin-top:60px;
+font-size:2rem;
+font-style:italic;
+}
+
+.scroll{
+margin-top:80px;
+opacity:.8;
 }
 
 </style>
@@ -300,24 +53,23 @@ font-size:.9rem;
 
 <body>
 
-<div class="stars"></div>
+<section class="hero">
 
-<nav>
+<h1>María F. Guzmán</h1>
 
-<div class="brand">
-MARÍA F. GUZMÁN
+<div class="subtitle">
+Researcher • Writer • Streamer
 </div>
 
-<div class="menu">
-
-<a href="#">Research</a>
-
-<a href="#">Writing</a>
-
-<a href="#">Community</a>
-
-<a href="#">CV</a>
-
-<a href="#">EN | ES</a>
-
+<div class="welcome">
+Welcome to my universe.
 </div>
+
+<div class="scroll">
+↓ Scroll to explore ↓
+</div>
+
+</section>
+
+</body>
+</html>
